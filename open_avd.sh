@@ -5,7 +5,7 @@
 # sh ~/open_android_virtual_device_avd.sh
 
 # install jave
-sudo apt update && sudo apt install unzip openjdk-17-jre openjdk-8-jre 
+sudo apt update && sudo apt install unzip openjdk-17-jre openjdk-8-jre curl
 
 # install android-studio command-line tools
 # check if files already exist
