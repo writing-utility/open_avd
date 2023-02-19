@@ -27,6 +27,9 @@ cd ~/Android/cmdline-tools && mv cmdline-tools latest
 #ADD check if system image is already installed
 ~/Android/cmdline-tools/latest/bin/sdkmanager "system-images;android-25;google_apis;x86_64" 
 
+# install emulator
+~/Android/cmdline-tools/latest/bin/sdkmanager --channel=3 emulator
+
 # create avd
 ~/Android/cmdline-tools/latest/bin/avdmanager create avd --force --name Nexus6P --abi google_apis/x86_64 --package 'system-images;android-25;google_apis;x86_64' --device "Nexus 6P"
 
