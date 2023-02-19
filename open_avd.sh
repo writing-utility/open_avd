@@ -9,9 +9,10 @@ sudo apt update && sudo apt install unzip openjdk-17-jre openjdk-8-jre curl
 
 # install android-studio command-line tools
 # check if files already exist
-mkdir -p ~/Android/cmdline-tools/latest
+mkdir -p ~/Android/cmdline-tools
 curl -o ~/cmdline-tools.zip https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip
-unzip ~/cmdline-tools.zip -d ~/Android/cmdline-tools/latest
+unzip ~/cmdline-tools.zip -d ~/Android/cmdline-tools
+cd ~/Android/cmdline-tools && mv cmdline-tools latest
 
 # update sdk
 ~/Android/cmdline-tools/latest/bin/sdkmanager --update
