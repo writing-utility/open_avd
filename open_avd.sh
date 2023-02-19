@@ -19,7 +19,7 @@ cd ~/Android/cmdline-tools && mv cmdline-tools latest
 
 # install platform
 # check if platform is installed
-~/Android/cmdline-tools/latest/bin/sdkmanager "platforms;android-25"
+~/Android/cmdline-tools/latest/bin/sdkmanager "platforms;android-25" #ERR auto yes
 
 # install system image
 # check if system image is installed
