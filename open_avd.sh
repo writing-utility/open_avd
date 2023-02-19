@@ -2,15 +2,17 @@
 
 # The script work with ubuntu-based distro
 # Type the follwing to run the script
-# sh ~/open_android_virtual_device_avd.sh
+# sh ~/open_avd.sh
+
+#ADD nice output (mute commands outputs + print running cmd + output err + declare if commands are complted)
 
 # install jave
-sudo apt update && sudo apt install unzip openjdk-17-jre openjdk-8-jre curl
+sudo apt update && sudo apt install unzip openjdk-17-jre openjdk-8-jre curl #ADD auto yes
 
 # install android-studio command-line tools
-# check if files already exist
+#ADD check if files already exist
 mkdir -p ~/Android/cmdline-tools
-curl -o ~/cmdline-tools.zip https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip
+curl -o ~/cmdline-tools.zip https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip #ADD exist if file is not availabe
 unzip ~/cmdline-tools.zip -d ~/Android/cmdline-tools
 cd ~/Android/cmdline-tools && mv cmdline-tools latest
 
@@ -18,11 +20,11 @@ cd ~/Android/cmdline-tools && mv cmdline-tools latest
 ~/Android/cmdline-tools/latest/bin/sdkmanager --update
 
 # install platform
-# check if platform is installed
-~/Android/cmdline-tools/latest/bin/sdkmanager "platforms;android-25" #ERR auto yes
+#ADD check if platform is already installed
+~/Android/cmdline-tools/latest/bin/sdkmanager "platforms;android-25" #ADD auto yes
 
 # install system image
-# check if system image is installed
+#ADD check if system image is already installed
 ~/Android/cmdline-tools/latest/bin/sdkmanager "system-images;android-25;google_apis;x86_64" 
 
 # create avd
